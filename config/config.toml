@@ -1,0 +1,8 @@
+# This is a TOML document.
+
+[config]
+MAX_LOAD_LIMIT_PER_DAY = 5000
+MAX_LOAD_LIMIT_PER_WEEK = 20000
+MAX_LOAD_PER_DAY = 3
+INPUT_FILE = "input.txt"
+OUTPUT_FILE = "output.txt"
