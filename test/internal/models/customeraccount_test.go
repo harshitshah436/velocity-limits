@@ -35,7 +35,7 @@ func TestNewDailyLimit(t *testing.T) {
 func TestNewWeeklyLimit(t *testing.T) {
 	t.Run("returns a new velocity limits per week", func(t *testing.T) {
 		expectedWeeklyLimit := &models.WeeklyLimit{
-			Date:         util.GetBeginningOfTheDay(time.Now()),
+			Date:         util.GetBeginningOfTheWeek(time.Now()),
 			MaxLoadLimit: 20000,
 		}
 		result := models.NewWeeklyLimit(time.Now(), 20000)
