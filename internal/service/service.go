@@ -11,9 +11,9 @@ import (
 )
 
 // GetTransactionsFromInputFile reads the input file and creates a slice of Transaction struct.
-func GetTransactionsFromInputFile(config *config.Configuration) ([]models.Transaction, error) {
+func GetTransactionsFromInputFile(config *config.Configuration, filePath string) ([]models.Transaction, error) {
 	transactions := []models.Transaction{}
-	inputFile, err := util.OpenFile(config)
+	inputFile, err := util.OpenFile(config, filePath)
 	if err != nil {
 		return nil, err
 	}
@@ -77,8 +77,8 @@ func ProcessTransaction(transaction *models.Transaction, storage *storage.Storag
 }
 
 // WriteResponsesToOutputFile writes responses to the output.txt file.
-func WriteResponsesToOutputFile(config *config.Configuration, responses []models.Response) error {
-	outputFile := util.CreateFile(config)
+func WriteResponsesToOutputFile(config *config.Configuration, responses []models.Response, filePath string) error {
+	outputFile := util.CreateFile(config, filePath)
 	defer outputFile.Close()
 	writer := bufio.NewWriter(outputFile)
 

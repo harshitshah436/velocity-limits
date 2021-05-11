@@ -7,16 +7,16 @@ import (
 	"velocity-limits/config"
 )
 
-func OpenFile(config *config.Configuration) (*os.File, error) {
-	input, err := os.Open("../../" + config.InputFile)
+func OpenFile(config *config.Configuration, path string) (*os.File, error) {
+	input, err := os.Open(path + config.InputFile)
 	if err != nil {
 		return nil, err
 	}
 	return input, nil
 }
 
-func CreateFile(config *config.Configuration) *os.File {
-	output, err := os.Create("../../" + config.OutputFile)
+func CreateFile(config *config.Configuration, path string) *os.File {
+	output, err := os.Create(path + config.OutputFile)
 	if err != nil {
 		log.Fatal("Error - Unable to open file: ", err)
 	}

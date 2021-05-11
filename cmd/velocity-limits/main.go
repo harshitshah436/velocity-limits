@@ -8,10 +8,11 @@ import (
 )
 
 func main() {
-	config := config.LoadConfig("../../config/")
+	projectRootPath := "../../"
+	config := config.LoadConfig(projectRootPath + "config/")
 	storage := storage.NewStorage()
 
-	transactions, err := service.GetTransactionsFromInputFile(&config)
+	transactions, err := service.GetTransactionsFromInputFile(&config, projectRootPath)
 	if err != nil {
 		log.Fatal("Error - from GetTransaction function: ", err)
 	}
@@ -19,7 +20,7 @@ func main() {
 	responses := service.LoadFunds(&config, transactions, storage)
 
 	// write to file
-	if err = service.WriteResponsesToOutputFile(&config, responses); err != nil {
+	if err = service.WriteResponsesToOutputFile(&config, responses, projectRootPath); err != nil {
 		log.Fatal("Error -  from WriteResponsesToOutputFile function: ", err)
 	}
 }
