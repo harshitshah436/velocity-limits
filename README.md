@@ -6,7 +6,7 @@ This project provides an application to process banking transactions considering
 
 ### Application functions
 
-- High-level functionality is to accept or decline attempts to load funds into customers' accounts in real-time. More details can be found at [ProblemDetails](docs/ProblemDetails.md)
+- High-level functionality is to accept or decline attempts to load funds into customers' accounts in real-time. More details can be found at [ProblemDetails](docs/ProblemDetails.md).
 - Application reads the input.txt file which contains transactions to load funds and creates transactions array to store them. It assumes the input and output file path as the project root directory.
 - Then, it attempts to load these transactions. If the transaction is a duplicate (determined by the same load ID and customer ID), it ignores all the following transactions. It validates each transaction and reset velocity limits if daily/weekly limits don't apply for the transaction date. Later, it processes the transaction and stores updated customer account details into the local storage.
 - Once the transaction is processed (where it's approved/rejected), a response array will be created with accepted/rejected information. This array will be marshaled into the JSON object and written into the output.txt file.
@@ -21,8 +21,8 @@ This project provides an application to process banking transactions considering
 
 #### Prerequisites
 - `go`
-    - [Installation Instructions](https://golang.org/doc/install)
-    - Verify using the commands: `go version`
+    - [Install Go](https://golang.org/doc/install)
+    - Verify using the command: `go version`
     - (Application tested on Mac OS)
         ```
         $ go version
