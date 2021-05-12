@@ -23,7 +23,7 @@ This project provides an application to process banking transactions considering
 - `go`
     - [Installation Instructions](https://golang.org/doc/install)
     - Verify using the commands: `go version`
-    - (Application tested on)
+    - (Application tested on Mac OS)
         ```
         $ go version
             go version go1.16.3 darwin/amd64
@@ -37,6 +37,38 @@ go mod init velocity-limits
 go mod tidy
 cd cmd/velocity-limits/
 go run .
+```
+
+### Installation using Docker (Cloud-native)
+
+#### Prerequisites
+
+- `docker` & `docker-compose`
+    - Verify using the commands: `docker -v` & `docker-compose -v`
+        ```
+        $ docker -v
+            Docker version 20.10.5, build 55c4c88
+        $ docker-compose -v
+            docker-compose version 1.29.0, build 07737305
+        ```
+
+#### Start application (Steps to Run)
+
+In the project **root** directory, run:
+```
+docker-compose up
+```
+
+#### Stop application
+
+```
+docker-compose down
+```
+
+#### Restart containers with the new code
+
+```
+docker-compose up --build
 ```
 
 ## Unit tests

@@ -1,0 +1,8 @@
+version: '3'
+services:
+  go:
+    build: .
+    image: velocity-limits-go:latest
+    ports:
+      - "8080:8080"
+    container_name: velocity-limits-go
