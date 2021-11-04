@@ -29,8 +29,6 @@ You can assume that the input arrives in ascending chronological order and that 
 
 Your program should process lines from `input.txt` and return output in the format specified above, either to standard output or a file. Expected output given our input data can be found in `output.txt`.
 
-You're welcome to write your program in a general-purpose language of your choosing, but as we use Go on the back-end and TypeScript on the front-end, we do have a preference towards solutions written in Go (back-end) and TypeScript (front-end).
+You're welcome to write your program in a general-purpose language of your choosing.
 
 We value well-structured, self-documenting code with sensible test coverage. Descriptive function and variable names are appreciated, as is isolating your business logic from the rest of your code. For example, consider decoupling input/output or data storage such that changing the underlying implementation wouldn't change how it is used from a client.
-
-Thanks for your interest in KOHO - have fun!
