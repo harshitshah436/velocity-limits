@@ -26,7 +26,7 @@ This project provides an application to process banking transactions considering
     - (Application tested on Mac OS)
         ```
         $ go version
-            go version go1.16.3 darwin/amd64
+            go version go1.17.3 darwin/amd64
         ```
 
 #### Start application (Steps to Run)
@@ -85,6 +85,8 @@ $ go test -v ./...
 ```
 
 #### Test Output (Verbose):
+<details><summary>console</summary>
+
 ```
 === RUN   TestNewCustomerAccount
 === RUN   TestNewCustomerAccount/returns_a_new_customer_account
@@ -180,6 +182,7 @@ ok  	velocity-limits/test/internal/service	0.450s
 PASS
 ok  	velocity-limits/test/internal/storage	0.340s
 ```
+</details>
 
 ## Resources
 
